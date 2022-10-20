@@ -10,7 +10,7 @@ public class BinarySearch {
         int l = 0;
         int h = arr.length;
 
-        while (l != h && l < h) {
+        while (l <= h) {
             int mid = (l + h) / 2;
             if (key == arr[mid]) {
                 return mid;
@@ -23,26 +23,6 @@ public class BinarySearch {
 
         return -1;
 
-    }
-
-    public static int rSearch(int key, int l, int h, int[] arr) {
-//        int l = 0;
-//        int h = arr.length;
-        if (l == h || l > h) {
-            return -1;
-        }
-
-        int mid = (l + h) / 2;
-
-        if (key == arr[mid]) {
-            return mid;
-        } else if (key > arr[mid]) {
-            l = mid + 1;
-        } else {
-            h = mid - 1;
-        }
-
-        return rSearch(key, l, h, arr);
     }
 
     public static void main(String[] args) {
@@ -63,8 +43,7 @@ public class BinarySearch {
         arr[13] = 57;
         arr[14] = 58;
         arr[15] = 80;
-        System.out.println(search(80, arr));
-        System.out.println(rSearch(7, 0, arr.length, arr));
+        System.out.println(search(39, arr));
     }
 
 }
