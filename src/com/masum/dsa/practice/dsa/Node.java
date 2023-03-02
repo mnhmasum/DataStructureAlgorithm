@@ -1,4 +1,4 @@
-package com.masum.dsa.practice.algorithm;
+package com.masum.dsa.practice.dsa;
 
 /**
  *
